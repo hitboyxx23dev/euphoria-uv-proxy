@@ -1,14 +1,22 @@
+:root {
+  --bg-black: #0b0b0f;
+  --purple: #7b5cff;
+  --sakura: #ff9acb;
+  --text-main: #f5e9f2;
+  --text-soft: rgba(245, 233, 242, 0.6);
+}
+
 body {
   font-family: "Comic Sans MS", cursive;
   margin: 0;
-  background: #111;
+  background: var(--bg-black);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 .fa-magnifying-glass {
-  color: white;
+  color: var(--sakura);
 }
 
 .flex-center {
@@ -31,34 +39,34 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #111;
+  background-color: var(--bg-black);
 }
 
 #uv-error {
-  color: #ff6666 !important;
+  color: var(--sakura) !important;
   white-space: pre-wrap;
 }
 
 #uv-error-code {
   font-size: 12px;
-  color: #fff;
+  color: var(--purple);
   font-family: "Courier New", Courier, monospace;
 }
 
 #uv-register-sw {
-  color: white;
-  background: #555555;
+  color: var(--text-main);
+  background: linear-gradient(135deg, var(--purple), var(--sakura));
   cursor: pointer;
   outline: none;
   border: none;
-  border-radius: 6px;
-  padding: 16px 20px;
+  border-radius: 50px;
+  padding: 16px 22px;
   line-height: 16px;
   display: none;
 }
 
 #uv-register-sw:active {
-  background: #333333;
+  filter: brightness(0.85);
 }
 
 #uv-register-sw.show {
@@ -72,11 +80,12 @@ body {
 
 .logo-wrapper .text {
   font-size: 75px;
-  color: #fff;
+  color: var(--sakura);
+  text-shadow: 0 0 20px rgba(255, 154, 203, 0.4);
 }
 
 .logo-wrapper h1 {
-  color: white;
+  color: var(--text-main);
 }
 
 footer {
@@ -100,56 +109,52 @@ footer a,
 footer span {
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-main);
   font-size: 15px;
 }
 
-footer a {
-  cursor: pointer;
-}
-
 footer a:hover {
+  color: var(--sakura);
   text-decoration: underline;
 }
 
 .desc p {
   width: 560px;
-  color: rgba(253, 253, 253, 0.514);
+  color: var(--text-soft);
   text-align: center;
 }
 
 #uv-address,
 #username {
-  background: none;
+  background: rgba(123, 92, 255, 0.08);
   font-family: inherit;
   padding: 0px 17px;
   height: 48px;
-  border: 1px solid rgb(255, 255, 255, 0.2);
-  color: var(--text-color);
-  border-radius: 3px;
+  border: 1px solid rgba(255, 154, 203, 0.35);
+  color: var(--text-main);
   outline: none;
   width: 350px;
   margin-top: 5px;
   border-radius: 50px;
-  color: #fff;
-  transition: border-radius 0.1s;
+  transition: all 0.15s ease;
 }
 
 #uv-address:focus,
 #username:focus {
-  border: 1px solid rgba(253, 253, 253, 0.514);
-  border-radius: 6px;
+  border-color: var(--purple);
+  box-shadow: 0 0 10px rgba(123, 92, 255, 0.4);
+  border-radius: 10px;
 }
 
 .credit {
-  border-radius: 10px;
-  padding: 10px;
-  display: block;
-  border: #fff 1px solid;
-  color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid var(--purple);
+  color: var(--text-main);
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 15px;
+  background: rgba(255, 154, 203, 0.05);
 }
 
 .credit label {
@@ -159,7 +164,7 @@ footer a:hover {
 
 .credit a,
 .credit label {
-  color: white;
+  color: var(--sakura);
   text-decoration: underline;
   text-align: right;
 }
@@ -167,6 +172,7 @@ footer a:hover {
 .credit pre {
   display: none;
   width: 100%;
+  color: var(--text-soft);
 }
 
 .credit label::after {
